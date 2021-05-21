@@ -14,9 +14,19 @@
         {
             "label": "Run In Browser",
             "type": "shell",
-            "command": "open http://localhost:8080/${relativeFile}",
+            "command": "open http://localhost/${relativeFile}",
             "windows": {
-                "command": "explorer 'http://localhost:8080/${relativeFile}'"
+                "command": "explorer 'http://localhost/${relativeFile}'"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "Run Site",
+            "type": "shell",
+            "command": "open http://localhost/${relativeFileDirname}",
+            "windows": {
+                "command": "explorer 'http://localhost/${relativeFileDirname}'"
             },
             "group": "build",
             "problemMatcher": []
