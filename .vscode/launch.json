@@ -5,6 +5,9 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Start Site ${relativeFileDirname}"
+        },
+        {
             "name": "Listen for Xdebug",
             "type": "php",
             "request": "launch",
