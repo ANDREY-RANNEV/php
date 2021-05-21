@@ -17,6 +17,13 @@
             "program": "${file}",
             "cwd": "${fileDirname}",
             "port": 9000
-        }
+        },
+        {
+            "type": "php",
+            "request": "launch",
+            "name": "Run using PHP executable",
+            "program": "${file}",
+            "runtimeExecutable": "C:\\Program Files\\PHP\\v7.4\\php.exe"
+            },
     ]
 }
