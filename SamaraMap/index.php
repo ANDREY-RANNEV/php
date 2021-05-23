@@ -48,7 +48,7 @@
         top: 20px;
         /* bottom: 20px; */
         width: 100%;
-        height: 97%;
+        height: 96.5%;
         left: 0;
         overflow-y: scroll;
         /* scrollbar-color: rebeccapurple green;
@@ -63,6 +63,13 @@
 } */
     .fit-picture {
         width: 20px;
+    }
+
+    .table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
     }
 </style>
 
@@ -90,26 +97,63 @@
         $connectionInfo = array("Database" => $database_name, "UID" => $myUser, "PWD" => $myPass);
 
         try {
-           $conn = new PDO("sqlsrv:Server=$server_name;Database=$database_name;ConnectionPooling=0", $myUser, $myPass);
-           $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-           $mssqldb_a= "доступна";
-           
-        } catch(PDOException $e) {
-            $mssqldb_a= "не доступна";
+            $conn = new PDO("sqlsrv:Server=$server_name;Database=$database_name;ConnectionPooling=0", $myUser, $myPass);
+            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $mssqldb_a = "доступна";
+        } catch (PDOException $e) {
+            $mssqldb_a = "не доступна";
             echo "not work</br>";
             echo $e->getMessage();
         }
 
-        $sql = 'SELECT * FROM Users ORDER BY Name';
-        foreach ($conn->query($sql) as $row) {
-            print $row['Name'] . "\t";
-            print $row['Password'] . "\t";
-            print $row['Login'] . "\n";
-        }   
-// $dbhandle = sqlsrv_connect($myServer, $myUser, $myPass);
-// //  or die("Could not connect to database: ".mssql_get_last_message());
-// echo mssql_get_last_message();
-        
+
+        // echo "<table>";
+        // echo "<tr>";
+        // echo "<th>Name</th>";
+        // echo "<th>Password</th>";
+        // echo "<th>Login</th>";
+        // echo "</tr>";
+        // $sql = 'SELECT * FROM Users ORDER BY Name';
+        // foreach ($conn->query($sql) as $row) {
+        //     echo "<tr>";
+        //     echo "<td>";
+        //     print $row['Name'] ;
+        //     echo "</td>";
+        //     echo "<td>";
+        //     print $row['Password'];
+        //     echo "</td>";
+        //     echo "<td>";
+        //     print $row['Login'];
+        //     echo "</td>";
+        //     echo "</tr>";
+        // }   
+        // echo "</table>";
+
+        echo "<table>";
+        echo "<tr>";
+        echo "<th>id</th>";
+        echo "<th>Name</th>";
+        echo "<th>Столица</th>";
+        echo "<th>type</th>";
+        echo "</tr>";
+        $MainData_json = json_decode(file_get_contents('json/Raion.json'));
+        print $MainData_json->total;
+        foreach ($MainData_json->raion as $row) {
+            echo "<tr>";
+
+            print "<td>".$row->id."|".$row->id_name."</td>";
+            print "<td>".$row->name."</td>";
+            print "<td>".$row->cap."</td>";
+            print "<td>".$row->type."</td>";
+
+            echo "</tr>";
+        }
+        echo "</table>";
+
+        // $dbhandle = sqlsrv_connect($myServer, $myUser, $myPass);
+        // //  or die("Could not connect to database: ".mssql_get_last_message());
+        // echo mssql_get_last_message();
+
         // $conn = sqlsrv_connect($server_name, $connectionInfo);
         // if ($conn === false) {
         //     echo "Could not connect.</br>";
@@ -126,6 +170,8 @@
         //     $mssqldb_a = "доступна";
         // }
         ?>
+        <iframe src="app/swg.php" width="488" height="458" scrolling="yes" style="overflow:hidden; margin-top:-4px; margin-left:-4px; border:1;"></iframe>
+
     </div>
 
     <div class="footer" id="footer">
