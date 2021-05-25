@@ -64,7 +64,6 @@
     .fit-picture {
         width: 20px;
     }
-
     .table,
     th,
     td {
