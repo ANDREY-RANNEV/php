@@ -87,23 +87,23 @@
         <?php
         // phpinfo();
 
-        $myUser = "sa";
-        $myPass = "saadmin";
-        // $database_name = "Went_Test"; 
-        // $serverName = "localhost";  
-        $server_name = "[2001:470:1f0b:3f7:5572:aa5a:4c71:a93e]";
-        $database_name = "FBUZ";
-        $connectionInfo = array("Database" => $database_name, "UID" => $myUser, "PWD" => $myPass);
+        // $myUser = "sa";
+        // $myPass = "saadmin";
+        // // $database_name = "Went_Test"; 
+        // // $serverName = "localhost";  
+        // $server_name = "[2001:470:1f0b:3f7:5572:aa5a:4c71:a93e]";
+        // $database_name = "FBUZ";
+        // $connectionInfo = array("Database" => $database_name, "UID" => $myUser, "PWD" => $myPass);
 
-        try {
-            $conn = new PDO("sqlsrv:Server=$server_name;Database=$database_name;ConnectionPooling=0", $myUser, $myPass);
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $mssqldb_a = "доступна";
-        } catch (PDOException $e) {
-            $mssqldb_a = "не доступна";
-            echo "not work</br>";
-            echo $e->getMessage();
-        }
+        // try {
+        //     $conn = new PDO("sqlsrv:Server=$server_name;Database=$database_name;ConnectionPooling=0", $myUser, $myPass);
+        //     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //     $mssqldb_a = "доступна";
+        // } catch (PDOException $e) {
+        //     $mssqldb_a = "не доступна";
+        //     echo "not work</br>";
+        //     echo $e->getMessage();
+        // }
 
 
         // echo "<table>";
@@ -128,26 +128,26 @@
         // }   
         // echo "</table>";
 
-        echo "<table>";
-        echo "<tr>";
-        echo "<th>id</th>";
-        echo "<th>Name</th>";
-        echo "<th>Столица</th>";
-        echo "<th>type</th>";
-        echo "</tr>";
-        $MainData_json = json_decode(file_get_contents('json/Raion.json'));
-        print $MainData_json->total;
-        foreach ($MainData_json->raion as $row) {
-            echo "<tr>";
+        // echo "<table>";
+        // echo "<tr>";
+        // echo "<th>id</th>";
+        // echo "<th>Name</th>";
+        // echo "<th>Столица</th>";
+        // echo "<th>type</th>";
+        // echo "</tr>";
+        // $MainData_json = json_decode(file_get_contents('json/Raion.json'));
+        // print $MainData_json->total;
+        // foreach ($MainData_json->raion as $row) {
+        //     echo "<tr>";
 
-            print "<td>".$row->id."|".$row->id_name."</td>";
-            print "<td>".$row->name."</td>";
-            print "<td>".$row->cap."</td>";
-            print "<td>".$row->type."</td>";
+        //     print "<td>".$row->id."|".$row->id_name."</td>";
+        //     print "<td>".$row->name."</td>";
+        //     print "<td>".$row->cap."</td>";
+        //     print "<td>".$row->type."</td>";
 
-            echo "</tr>";
-        }
-        echo "</table>";
+        //     echo "</tr>";
+        // }
+        // echo "</table>";
 
         // $dbhandle = sqlsrv_connect($myServer, $myUser, $myPass);
         // //  or die("Could not connect to database: ".mssql_get_last_message());
