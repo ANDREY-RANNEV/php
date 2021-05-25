@@ -169,7 +169,7 @@
         //     $mssqldb_a = "доступна";
         // }
         ?>
-        <iframe src="app/swg.php" width="488" height="458" scrolling="yes" style="overflow:hidden; margin-top:-4px; margin-left:-4px; border:1;"></iframe>
+        <iframe src="app/swg.php" width="888" height="958" scrolling="yes" style="overflow:hidden; margin-top:-4px; margin-left:-4px; border:1;"></iframe>
 
     </div>
 
