@@ -289,12 +289,12 @@
         // }
         ?>
         <iframe src="app/swg.php" width="888" height="958" scrolling="yes" style="overflow:hidden; margin-top:-4px; margin-left:-4px; border:1;"></iframe>
-        <div class="tooltip">Hover over me
+        <!-- <div class="tooltip">Hover over me
             <span class="tooltiptext">Tooltip text</span>
         </div>
         <div class="popup" onclick="myFunction()">Click me!
             <span class="popuptext" id="myPopup">Popup text...</span>
-        </div>
+        </div> -->
 
     </div>
     <div class="footer" id="footer">
