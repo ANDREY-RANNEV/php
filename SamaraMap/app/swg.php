@@ -9,10 +9,10 @@
     <?php
     include 'connectiv.php';
 
-    $scaleFactor = 0.55;
+    $scaleFactor = $_GET['scaleF'];
     $svgX = 836 * $scaleFactor;
     $svgY = 876 * $scaleFactor;
-    
+
     echo "<svg width=\"$svgX\" height=\"$svgY\" xmlns=\"http://www.w3.org/2000/svg\" style=\"background-color:#CCCCCC\">";
     // echo "<path d='m 100.56,100.89 150,100 150,150 Z'  fill='#00c256' >" ;
     $raionData_json = json_decode(file_get_contents('../json/Raion.json'));
