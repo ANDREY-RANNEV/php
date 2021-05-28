@@ -295,9 +295,9 @@
         <div class="popup" onclick="myFunction()">Click me!
             <span class="popuptext" id="myPopup">Popup text...</span>
         </div>
-        <div class="footer" id="footer">
-        </div>
 
+    </div>
+    <div class="footer" id="footer">
         <?php
         echo 'Database "' . $database_name . '" ' . $mssqldb_a;
         echo '&nbsp; <a href="https://windows.php.net/" target="_blank">';
