@@ -206,7 +206,7 @@
         <?php
         // phpinfo();
 
-        include 'connectiv.php';
+        include 'app/connectiv.php';
 
         // $connectionInfo = array("Database" => $database_name, "UID" => $myUser, "PWD" => $myPass);
 
