@@ -6,7 +6,7 @@ $server_name = "192.168.1.65";
 $database_name = "FBUZ";
 
 $_myUser= "rannev";
-$_myPass = "___GraZ105!";
+$_myPass = "";
 // $_server_name = "[2001:470:1f0b:3f7:211:32ff:fe73:fb25]";
 // $_server_name = "[2001:470:1f0b:3f7:211:32ff:fe73:fb26]";
 $_server_name = "192.168.5.5";
