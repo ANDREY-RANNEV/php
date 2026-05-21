@@ -10,4 +10,4 @@ $_myPass = "";
 
 $_server_name = "192.168.5.5";
 $_database_name = "FBUZ";
-$_port = '3307';
+$_port = '';
